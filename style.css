@@ -1,0 +1,20 @@
+#calendarGrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    /* 7 columns for 7 days of the week */
+    grid-gap: 10px;
+    /* spacing between cells */
+}
+
+#calendarWeekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 10px;
+}
+
+#calendarWeekdays div,
+#calendarGrid div {
+    text-align: center;
+    padding: 10px;
+    /* border: 1px solid #ddd; */
+}
