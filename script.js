@@ -1,23 +1,3 @@
-const API_KEY = '';
-
-const fileInput = 'site.db';
-const output = document.getElementById('test');
-
-fileInput.addEventListener('change', () => {
-    const f = fileInput.files[0];
-    const r = new FileReader();
-    r.onload = function () {
-        const Uints = new Uint8Array(r.result);
-        initSqlJs().then((SQL) => {
-            const db = new SQL.Database(Uints);
-            const contents = db.exec('SELECT * FROM test4web');
-            // Just to display the results
-            output.textContent = JSON.stringify(contents);
-        });
-    };
-    r.readAsArrayBuffer(f);
-});
-
 let currentMonth = new Date().getMonth();
 let currentYear = new Date().getFullYear();
 
